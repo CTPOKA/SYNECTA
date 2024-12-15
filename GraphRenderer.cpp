@@ -90,15 +90,17 @@ void GraphRenderer::paint(QPainter *painter)
     painter->setPen(graphPen);
 
     double x1, y1, x2, y2;
+    x2 = XNormalization(X[0], rect);
+    y2 = YNormalization(Y[0], rect);
     for (int i = 0; i < X.size(); ++i) {
-        x1 = XNormalization(X[i], rect);
-        y1 = YNormalization(Y[i], rect);
 
-        if (i > 0)
-            painter->drawLine(x1, y1, x2, y2);
+        x1 = x2;
+        y1 = y2;
 
-        x2 = x1;
-        y2 = y1;
+        x2 = XNormalization(X[i], rect);
+        y2 = YNormalization(Y[i], rect);
+
+        painter->drawLine(x1, y1, x2, y2);
     }
 }
 
