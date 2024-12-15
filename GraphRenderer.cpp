@@ -94,7 +94,7 @@ void GraphRenderer::paint(QPainter *painter)
         x1 = XNormalization(X[i], rect);
         y1 = YNormalization(Y[i], rect);
 
-        if (i >= 0)
+        if (i > 0)
             painter->drawLine(x1, y1, x2, y2);
 
         x2 = x1;
