@@ -1,4 +1,3 @@
-#include "DataProcessor.h"
 #include "FileParser.h"
 #include "FileParser.h"
 #include <QFile>
@@ -56,10 +55,7 @@ Q_INVOKABLE bool FileParser::loadFile(const QString &filePath)
         return false;
     }
 
-    DataProcessor processor;
-    QVector<double> logMagValues = processor.calculateLogMag(s11Values);
-
-    emit dataReady(frequencies, logMagValues);
+    emit dataReady(frequencies, s11Values);
 
     return true;
 }

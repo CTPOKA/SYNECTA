@@ -92,7 +92,7 @@ void GraphRenderer::paint(QPainter *painter)
     double x1, y1, x2, y2;
     x2 = XNormalization(X[0], rect);
     y2 = YNormalization(Y[0], rect);
-    for (int i = 0; i < X.size(); ++i) {
+    for (int i = 1; i < X.size(); i++) {
 
         x1 = x2;
         y1 = y2;

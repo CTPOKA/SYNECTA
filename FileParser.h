@@ -15,7 +15,7 @@ public:
 
 signals:
     void errorOccurred(const QString& error);
-    void dataReady(const QVector<double>& frequencies, const QVector<double> &logMagValues);
+    void dataReady(const QVector<double>& frequencies, const QVector<std::complex<double>>& s11Values);
 
 private:
     QVector<double> frequencies;

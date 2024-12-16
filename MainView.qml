@@ -32,8 +32,6 @@ Window {
     Rectangle {
         id: background
         color: "lightgray"
-        anchors.bottomMargin: 20
-        anchors.rightMargin: 20
         anchors {
             right: parent.right
             left: parent.left
@@ -60,9 +58,9 @@ Window {
     }
 
     Connections {
-        target: fileParser
+        target: dataProcessor
         onDataReady: {
-            graphRenderer.setGraphData(frequencies, logMagValues)
+            graphRenderer.setGraphData(X, Y)
         }
     }
 
