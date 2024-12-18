@@ -15,12 +15,12 @@
    ```bash
    git clone https://github.com/CTPOKA/SYNECTA
    cd SYNECTA
-2. Сгенерируйте Makefile с помощью qmake
+2. Сгенерируйте Makefile с помощью qmake:
    ```bash
    qmake test.pro
 3. Соберите проект:
    ```bash
-   make
-4. Запустите приложение.
+   mingw32-make
+4. Запустите приложение:
    ```bash
-   ./test.exe
+   release/test.exe
